@@ -1,0 +1,18 @@
+{
+  "name": "price-compare",
+  "version": "1.0.0",
+  "description": "Compare item prices across multiple stores and highlight the lowest price",
+  "type": "module",
+  "scripts": {
+    "start": "node server-puppeteer.js",
+    "start:lite": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "puppeteer": "^22.7.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
