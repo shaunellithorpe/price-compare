@@ -7,24 +7,16 @@ services:
 
     buildCommand: npm install
     startCommand: npm start
-
     autoDeploy: true
 
-    # Health check hits the static frontend, which loads fine if the server is up
     healthCheckPath: /
 
     envVars:
       - key: NODE_ENV
         value: production
-      # Ensure Puppeteer downloads a compatible Chromium at build time
+      # Make sure Puppeteer downloads its compatible Chromium during build
       - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
         value: "false"
-      # Optional: cache path for Chromium between builds (keeps install faster)
+      # Optional: speed up subsequent builds by caching Chromium
       # - key: PUPPETEER_CACHE_DIR
       #   value: /opt/render/project/.cache/puppeteer
-
-    # Optional: increase start/health timeouts if pages are slow to warm up
-    # healthCheckTimeout: 100
-
-    # preDeployCommand: ''
-
