@@ -3,7 +3,7 @@ services:
     name: price-compare
     env: node
     plan: free
-    region: virgina
+    region: virginia
 
     buildCommand: npm install
     startCommand: npm start
@@ -27,3 +27,4 @@ services:
     # healthCheckTimeout: 100
 
     # preDeployCommand: ''
+
