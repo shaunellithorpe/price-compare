@@ -3,7 +3,7 @@ services:
     name: price-compare
     env: node
     plan: free
-    region: oregon
+    region: virgina
 
     buildCommand: npm install
     startCommand: npm start
@@ -25,4 +25,5 @@ services:
 
     # Optional: increase start/health timeouts if pages are slow to warm up
     # healthCheckTimeout: 100
+
     # preDeployCommand: ''
